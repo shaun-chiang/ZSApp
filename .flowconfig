@@ -45,6 +45,9 @@ node_modules/react-native/flow/
 node_modules/expo/flow/
 
 [options]
+module.name_mapper='\(react-native\)' -> '<PROJECT_ROOT>/modulesStub.js'
+module.name_mapper='\(react-navigation\)' -> '<PROJECT_ROOT>/modulesStub.js'
+
 emoji=true
 
 module.system=haste

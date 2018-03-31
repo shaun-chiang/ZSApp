@@ -22,7 +22,11 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "jest-expo"
@@ -31,6 +35,8 @@
     "expo": "^25.0.0",
     "react": "16.2.0",
     "react-native": "0.52.0",
-    "react-native-htmlview": "^0.12.1"
+    "react-native-elements": "^0.19.0",
+    "react-native-htmlview": "^0.12.1",
+    "react-navigation": "^1.5.8"
   }
 }
