@@ -16,12 +16,6 @@ export default class DetailsScreen extends React.Component {
   render() {
     htmlToShow = this.state.data.content;
 
-    /* <Header
-          leftComponent={{ icon: "menu", color: "#fff" }}
-          centerComponent={{ text: "MY TITLE", style: { color: "#fff" } }}
-          rightComponent={{ icon: "home", color: "#fff" }}
-        /> */
-
     return (
       <View>
         <Header
