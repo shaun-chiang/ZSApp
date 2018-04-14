@@ -19,15 +19,18 @@ export default class DetailsScreen extends React.Component {
     return (
       <View>
         <Header
-          leftComponent={{ icon: "menu", color: "#fff" }}
+          leftComponent={{
+            icon: "menu",
+            color: "#fff",
+            onPress: () => this.props.navigation.navigate("DrawerOpen")
+          }}
           centerComponent={{
             text: this.state.data.title,
             style: { color: "#fff" }
           }}
-          rightComponent={{ icon: "home", color: "#fff" }}
         />
-        <ScrollView>
-          <HTMLView value={htmlToShow} stylesheet={styles} />
+        <ScrollView style={styles.container}>
+          <HTMLView value={htmlToShow} stylesheet={htmlStyles} />
         </ScrollView>
       </View>
     );
@@ -52,7 +55,7 @@ export default class DetailsScreen extends React.Component {
       .done();
   }
 }
-const styles = StyleSheet.create({
+const htmlStyles = StyleSheet.create({
   a: {
     fontWeight: "300",
     color: "#83d87d"
@@ -66,5 +69,11 @@ const styles = StyleSheet.create({
   },
   p: {
     fontSize: 16
+  }
+});
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 4
   }
 });
